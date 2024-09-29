@@ -36,6 +36,36 @@ public class Clock {
         hours %= 24;
     }
 
+    // Method to get the current time in "HH:MM:SS" format
+    public String getTime() {
+        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
+    }
+
+    // Conversion methods
+    public static double secondsToMinutes(int seconds) {
+        return seconds / 60.0;
+    }
+
+    public static double secondsToHours(int seconds) {
+        return seconds / 3600.0;
+    }
+
+    public static double minutesToSeconds(int minutes) {
+        return minutes * 60.0;
+    }
+
+    public static double minutesToHours(int minutes) {
+        return minutes / 60.0;
+    }
+
+    public static double hoursToSeconds(int hours) {
+        return hours * 3600.0;
+    }
+
+    public static double hoursToMinutes(int hours) {
+        return hours * 60.0;
+    }
+
     // Main method that demonstrate the usage of the class Clock and conversions
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -50,6 +80,11 @@ public class Clock {
             System.out.println("6) Hours to Minutes");
             System.out.println("Choose the conversion: ");
             int choice = scanner.nextInt();
+
+            System.out.print("Enter the value: ");
+            int value = scanner.nextInt();
+            double result = 0;
+
         }
     }
 }
